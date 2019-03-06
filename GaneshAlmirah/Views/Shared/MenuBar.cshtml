@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Menu Bar</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="~/Content/bootstrap.min.css">
+
+    @* @RenderSection("head", required: false)*@
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-sm bg-dark fixed-top">
+        <div class="container-fluid">
+            <!--Navbar Header Start Here-->
+            <!--<div class="navbar-header">
+            <a class="navbar-brand" href="#">C-sharp Corner</a>
+        </div>-->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Inventory</a> @*godown details*@
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Calculation</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Gallery</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarSale" data-toggle="dropdown">Sales/Purchase</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#"> Sales</a>
+                        <a class="dropdown-item" href="#"> purchase</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarBasic" data-toggle="dropdown">Base Data</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#"> Employee </a>
+                        <a class="dropdown-item" href="#"> Raw material </a>
+                        <a class="dropdown-item" href="#"> Product </a>
+                        <a class="dropdown-item" href="#"> work type </a>
+                        <a class="dropdown-item" href="#"> material type </a>
+
+
+                    </div>
+                </li>
+            </ul>
+        </div>
+        </nav>
+        <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+        <script src="~/Scripts/bootstrap.min.js"></script>
+        @RenderBody()
+    </body>
+    </html>

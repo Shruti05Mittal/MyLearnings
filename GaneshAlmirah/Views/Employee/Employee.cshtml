@@ -1,0 +1,28 @@
+﻿@model GaneshAlmirah.Models.Worker
+@{
+    ViewBag.Title = "Employee";
+    Layout = "~/Views/Shared/MenuBar.cshtml";
+}
+
+<h2>Employee</h2>
+@using (Html.BeginForm("SaveEmployee", "Employee", FormMethod.Post))
+{
+    <table>
+        <tr>
+            <td> @Html.LabelFor(a => a.EmployeeName)</td>
+            <td>@Html.TextAreaFor(a=>a.EmployeeName)</td>
+            <td>@Html.ValidationMessageFor(a=>a.EmployeeName)</td>
+        </tr>
+        <tr>
+            <td> @Html.LabelFor(a => a.PhoneNo)</td>
+            <td>@Html.TextAreaFor(a => a.PhoneNo)</td>
+            <td>
+                @Html.ValidationMessageFor(a => a.PhoneNo)
+            </td>
+            <td> @Html.LabelFor(a => a.Desination)</td>
+            <td>@Html.DropDownListFor(a=>a.Desination ,new SelectList(Model.lstDesination,"Value","Text") )</td>
+            <td>@Html.ValidationMessageFor(a => a.Desination)</td>
+        </tr>
+    </table>
+}
+
